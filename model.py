@@ -6,8 +6,6 @@ import numpy as np
 from math import ceil 
 from utils import get_mask_from_lengths
 
-import pdb
-
 
 class LinearNorm(torch.nn.Module):
     def __init__(self, in_dim, out_dim, bias=True, w_init_gain='linear'):
@@ -283,7 +281,7 @@ class Decoder_4(nn.Module):
     
 
 class Generator_3(nn.Module):
-    """Sync model"""
+    """SpeechSplit model"""
     def __init__(self, hparams):
         super().__init__()
         
