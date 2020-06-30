@@ -54,7 +54,7 @@ Please use the scripts to prepare your own data for training.
 
 2. Generate training metadata: ```python make_metadata.py ```
 
-3. Run the traning scripts: ```python main.py```
+3. Run the training scripts: ```python main.py```
 
 Please refer to Appendix B.4 for training guidance.
 
