@@ -31,7 +31,7 @@ The audio demo for SpeechSplit can be found [here](https://auspicious3000.github
 - pysptk
 - soundfile
 - matplotlib
-- wavenet_vocoder ```git checkout 44e0e36```
+- wavenet_vocoder ```pip install wavenet_vocoder==0.1.1```
   for more information, please refer to https://github.com/r9y9/wavenet_vocoder
 
 
@@ -41,7 +41,7 @@ Download [pre-trained models](https://drive.google.com/file/d/1JF1WNS57wWcbmn1Ez
 
 Download the same WaveNet vocoder model as in [AutoVC](https://github.com/auspicious3000/autovc) to ```assets```
 
-Run ```demo.ipynb```
+Run ```demo.ipynb``` 
 
 
 ## To Train (by request)
