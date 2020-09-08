@@ -41,6 +41,8 @@ Download the same WaveNet vocoder model as in [AutoVC](https://github.com/auspic
 
 Run ```demo.ipynb``` 
 
+Please refer to [AutoVC](https://github.com/auspicious3000/autovc) if you have any problems with the vocoder part, because they share the same vocoder scripts.
+
 
 ## To Train
 
