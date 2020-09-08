@@ -2,8 +2,6 @@
 
 This repository provides a PyTorch implementation of [SpeechSplit](https://arxiv.org/abs/2004.11284), which enables more detailed speaking style conversion by disentangling speech into content, timbre, rhythm and pitch.
 
-To ensure respect for privacy rights and responsible use of our code, we are only releasing a portion of our code for demonstration purposes only. If you are interested in training, please send an email to auspicious3000@gmail.com with name, affiliation and a description of how the code will be used for your research.
-
 This is a short video that explains the main concepts of our work. If you find this work useful and use it in your research, please consider citing our paper.
 
 [![SpeechSplit](./assets/cover.png)](https://youtu.be/sIlQ3GcslD8)
@@ -44,7 +42,7 @@ Download the same WaveNet vocoder model as in [AutoVC](https://github.com/auspic
 Run ```demo.ipynb``` 
 
 
-## To Train (by request)
+## To Train
 
 Download [training data](https://drive.google.com/file/d/1r1WK8c2QpjYaxKGGCap8Rm7uopBGJGNy/view?usp=sharing) to ```assets```.
 The provided training data is very small for code verification purpose only.
