@@ -12,6 +12,22 @@ hparams = HParams(
     dim_neck_2 = 1,
     freq_3 = 8,
     dim_neck_3 = 32,
+    out_channels = 10 * 3,
+    layers = 24,
+    stacks = 4,
+    residual_channels = 512,
+    gate_channels = 512,  # split into 2 groups internally for gated activation
+    skip_out_channels = 256,
+    cin_channels = 80,
+    gin_channels = -1,  # i.e., speaker embedding dim
+    weight_normalization = True,
+    n_speakers = -1,
+    dropout = 1 - 0.95,
+    kernel_size = 3,
+    upsample_conditional_features = True,
+    upsample_scales = [4, 4, 4, 4],
+    freq_axis_kernel_size = 3,
+    legacy = True,
     
     dim_enc = 512,
     dim_enc_2 = 128,
@@ -40,6 +56,11 @@ hparams = HParams(
     num_workers = 0,
     samplier = 8,
     
+    # Convenient model builder
+    builder = "wavenet",
+
+    hop_size = 256,
+    log_scale_min = float(-32.23619130191664),
 )
 
 
