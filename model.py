@@ -408,7 +408,7 @@ class InterpLnr(nn.Module):
         # offset starts from the 2nd segment
         offset = F.pad(offset[:, :-1], (1,0), value=0).view(-1, 1)
         
-        idx_scaled_org = idx_scaled_fl + offset
+        idx_scaled_org = idx_scaled_fl + offset.float()
         
         len_seq_rp = torch.repeat_interleave(len_seq, self.max_num_seg)
         idx_mask_org = idx_scaled_org < (len_seq_rp - 1).unsqueeze(-1)
