@@ -392,7 +392,7 @@ class InterpLnr(nn.Module):
         scales = torch.rand(batch_size*self.max_num_seg, 
                             device=device) + 0.5
         
-        idx_scaled = indices / scales.unsqueeze(-1)
+        idx_scaled = indices.float()  / scales.unsqueeze(-1)
         idx_scaled_fl = torch.floor(idx_scaled)
         lambda_ = idx_scaled - idx_scaled_fl
         
