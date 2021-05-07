@@ -402,7 +402,7 @@ class InterpLnr(nn.Module):
                                 device=device)
         
         # end point of each segment
-        idx_mask = idx_scaled_fl < (len_seg - 1)
+        idx_mask = idx_scaled_fl < (len_seg - 1).float()
        
         offset = len_seg.view(batch_size, -1).cumsum(dim=-1)
         # offset starts from the 2nd segment
