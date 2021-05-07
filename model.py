@@ -411,7 +411,7 @@ class InterpLnr(nn.Module):
         idx_scaled_org = idx_scaled_fl + offset.float()
         
         len_seq_rp = torch.repeat_interleave(len_seq, self.max_num_seg)
-        idx_mask_org = idx_scaled_org < (len_seq_rp - 1).unsqueeze(-1)
+        idx_mask_org = idx_scaled_org < ((len_seq_rp - 1).unsqueeze(-1)).float()
         
         idx_mask_final = idx_mask & idx_mask_org
         
