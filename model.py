@@ -392,7 +392,7 @@ class InterpLnr(nn.Module):
         scales = torch.rand(batch_size*self.max_num_seg, 
                             device=device) + 0.5
         
-        idx_scaled = indices / scales.unsqueeze(-1)
+        idx_scaled = indices.float()  / scales.unsqueeze(-1)
         idx_scaled_fl = torch.floor(idx_scaled)
         lambda_ = idx_scaled - idx_scaled_fl
         
@@ -402,16 +402,16 @@ class InterpLnr(nn.Module):
                                 device=device)
         
         # end point of each segment
-        idx_mask = idx_scaled_fl < (len_seg - 1)
+        idx_mask = idx_scaled_fl < (len_seg - 1).float()
        
         offset = len_seg.view(batch_size, -1).cumsum(dim=-1)
         # offset starts from the 2nd segment
         offset = F.pad(offset[:, :-1], (1,0), value=0).view(-1, 1)
         
-        idx_scaled_org = idx_scaled_fl + offset
+        idx_scaled_org = idx_scaled_fl + offset.float()
         
         len_seq_rp = torch.repeat_interleave(len_seq, self.max_num_seg)
-        idx_mask_org = idx_scaled_org < (len_seq_rp - 1).unsqueeze(-1)
+        idx_mask_org = idx_scaled_org < ((len_seq_rp - 1).unsqueeze(-1)).float()
         
         idx_mask_final = idx_mask & idx_mask_org
         
