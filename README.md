@@ -35,11 +35,11 @@ The audio demo for SpeechSplit can be found [here](https://auspicious3000.github
 
 ## To Run Demo
 
-Download [pre-trained models](https://drive.google.com/file/d/1JF1WNS57wWcbmn1EztJxh09xU739j4_g/view?usp=sharing) to ```assets```
+Download [pre-trained models](https://ibm.box.com/s/kgomuly35meo8xsh5mfxxklol8bulrry) to ```assets```
 
 Download the same WaveNet vocoder model as in [AutoVC](https://github.com/auspicious3000/autovc) to ```assets```
 
-The fast and high-quality hifi-gan v1 (https://github.com/jik876/hifi-gan) pre-trained model is now available [here.](https://drive.google.com/file/d/1n76jHs8k1sDQ3Eh5ajXwdxuY_EZw4N9N/view?usp=sharing)
+The fast and high-quality hifi-gan v1 (https://github.com/jik876/hifi-gan) pre-trained model is now available [here.](https://ibm.box.com/s/asvv554v0zd09yipl2qadz49i7jpdhta)
 
 Run ```demo.ipynb``` 
 
@@ -48,7 +48,7 @@ Please refer to [AutoVC](https://github.com/auspicious3000/autovc) if you have a
 
 ## To Train
 
-Download [training data](https://drive.google.com/file/d/1r1WK8c2QpjYaxKGGCap8Rm7uopBGJGNy/view?usp=sharing) to ```assets```.
+Download [training data](https://ibm.box.com/s/ahaj5zbuwu7jox47zxnsls2syf12g4c5) to ```assets```.
 The provided training data is very small for code verification purpose only.
 Please use the scripts to prepare your own data for training.
 
